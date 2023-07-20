@@ -1,12 +1,11 @@
 <template>
  
-   <div class="ccontainer">
+   <div class="container">
     <div class="row">
      <div class="text-center">
         <h3> Add Category</h3>
      </div>
     </div>
-   </div>
    <div class="row">
     <form>
         <div class="form-group">
@@ -23,6 +22,7 @@
         </div>
         <button type="submit">Submit</button>
     </form>
+   </div>
    </div>
 </template>
 
