@@ -1,0 +1,42 @@
+body {
+    background-color:#DAFFFB;
+}
+.btn {
+    margin-bottom: 50px;
+    background-color: #068FFF;
+    color: white;
+    border: none; /* Optional: Remove the button border */
+    padding: 10px 20px; /* Optional: Add padding to the button */
+    border-radius: 5px; /* Optional: Round the button corners */
+
+}
+.btn:hover {
+    background-color: black;
+}
+
+
+.custom-navbar {
+    background-color: black;
+}
+
+#logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#nav {
+    padding: 30px;
+    background-color: #176B87;
+    margin-bottom: 5%;
+}
+
+#nav a {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+    color: black;
+}

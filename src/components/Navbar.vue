@@ -61,19 +61,3 @@
     name: "Navbar",
   };
   </script>
-
-  <style scoped>
-
-.custom-navbar {
-  background-color: black;
-}
-
-  #logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
-  </style>

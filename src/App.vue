@@ -5,9 +5,9 @@
     <router-link to="/about">About</router-link>
   </div>
   <router-view
-  :baseURL="baseURL"
-  :categories="categories"
-  :products="products"
+      :baseURL="baseURL"
+      :categories="categories"
+      :products="products"
   >
   </router-view>
 </template>
@@ -29,16 +29,16 @@ export default {
 
       // api call to get all the categories
       await axios.get(this.baseURL + "category/")
-      .then(res => {
-        this.categories = res.data
-      }).catch((err) => console.log('err', err));
+          .then(res => {
+            this.categories = res.data
+          }).catch((err) => console.log('err', err));
 
       // api call to get the products
 
       await axios.get(this.baseURL + "product/")
-      .then(res => {
-        this.products = res.data
-      }).catch((err) => console.log('err', err));
+          .then(res => {
+            this.products = res.data
+          }).catch((err) => console.log('err', err));
     }
   },
   mounted() {
@@ -55,21 +55,4 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-  background-color: lightskyblue;
-  text-align: center;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: purple;
-}
 </style>
-
-Navbar

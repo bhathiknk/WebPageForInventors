@@ -5,6 +5,7 @@ import Category from '../views/Category/Category'
 import Product from '../views/Product/Product'
 import Admin from "../views/Admin";
 import AddProduct from "../views/Product/AddProduct";
+import '../views/global.css';
 
 const routes = [
   {
@@ -30,7 +31,7 @@ const routes = [
     name: 'Category',
     component: Category
   },
-    // admin home page
+  // admin home page
   {
     path: '/admin',
     name: 'Admin',
@@ -41,7 +42,7 @@ const routes = [
     name: 'AdminProduct',
     component: Product
   },
-    // add product
+  // add product
   {
     path: '/admin/product/new',
     name: 'AddProduct',
