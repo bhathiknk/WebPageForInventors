@@ -7,6 +7,9 @@ import Admin from "../views/Admin";
 import AddProduct from "../views/Product/AddProduct";
 import EditCategory from "../views/Category/EditCategory";
 import EditProduct from "../views/Product/EditProduct";
+import ShowDetails from "../views/Product/ShowDetails";
+import ListProducts from "../views/Category/ListProducts";
+
 import '../views/global.css'
 
 const routes = [
@@ -40,6 +43,12 @@ const routes = [
     name:'EditCategory',
     component: EditCategory
   },
+  // category detail page
+  {
+    path: '/category/show/:id',
+    name: 'ListProducts',
+    component: ListProducts
+  },
   // admin home page
   {
     path: '/admin',
@@ -63,6 +72,12 @@ const routes = [
     name:'EditProduct',
     component: EditProduct
   },
+  // show details of product
+  {
+    path: '/product/show/:id',
+    name: 'ShowDetails',
+    component: ShowDetails
+  }
 ]
 
 const router = createRouter({
