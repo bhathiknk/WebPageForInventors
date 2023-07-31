@@ -5,7 +5,9 @@ import Category from '../views/Category/Category'
 import Product from '../views/Product/Product'
 import Admin from "../views/Admin";
 import AddProduct from "../views/Product/AddProduct";
-import '../views/global.css';
+import EditCategory from "../views/Category/EditCategory";
+import EditProduct from "../views/Product/EditProduct";
+import '../views/global.css'
 
 const routes = [
   {
@@ -31,6 +33,13 @@ const routes = [
     name: 'Category',
     component: Category
   },
+
+    //category edit
+  {
+    path:'/admin/category/:id',
+    name:'EditCategory',
+    component: EditCategory
+  },
   // admin home page
   {
     path: '/admin',
@@ -47,7 +56,13 @@ const routes = [
     path: '/admin/product/new',
     name: 'AddProduct',
     component: AddProduct
-  }
+  },
+  // edit product
+  {
+    path:'/admin/product/:id',
+    name:'EditProduct',
+    component: EditProduct
+  },
 ]
 
 const router = createRouter({

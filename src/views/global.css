@@ -3,7 +3,7 @@ body {
 }
 .btn {
     margin-bottom: 50px;
-    background-color: #068FFF;
+    background-color: black;
     color: white;
     border: none; /* Optional: Remove the button border */
     padding: 10px 20px; /* Optional: Add padding to the button */
@@ -11,13 +11,26 @@ body {
 
 }
 .btn:hover {
-    background-color: black;
+    background-color: #176B87;
 }
 
 
 .custom-navbar {
     background-color: black;
 }
+
+.btn-admin{
+    margin-top: 5%;
+    background-color: black;
+    color: white;
+    border: none; /* Optional: Remove the button border */
+    padding: 10px 20px; /* Optional: Add padding to the button */
+    border-radius: 5px; /* Optional: Round the button corners */
+}
+.btn-admin:hover {
+    background-color: #176B87;
+}
+
 
 #logo-text {
     font-size: 24px;
@@ -29,7 +42,7 @@ body {
 #nav {
     padding: 30px;
     background-color: #176B87;
-    margin-bottom: 5%;
+
 }
 
 #nav a {
@@ -38,5 +51,5 @@ body {
 }
 
 #nav a.router-link-exact-active {
-    color: black;
+    color: white;
 }

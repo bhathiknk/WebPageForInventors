@@ -10,13 +10,13 @@
       </router-link>
       <!--    Burger Button-->
       <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -61,3 +61,17 @@
     name: "Navbar",
   };
   </script>
+
+<style>
+
+/* Customize the color of the navbar-toggler-icon */
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 1h16v2H0zm0 4h16v2H0zm0 4h16v2H0zm0 4h16v2H0z'/%3E%3C/svg%3E");
+}
+
+/* Customize the color of the navbar-toggler-icon on hover/focus */
+.custom-navbar .navbar-toggler-icon:hover,
+.custom-navbar .navbar-toggler-icon:focus {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ccc' d='M0 1h16v2H0zm0 4h16v2H0zm0 4h16v2H0zm0 4h16v2H0z'/%3E%3C/svg%3E");
+}
+</style>
