@@ -11,7 +11,7 @@
 
         </header>
       </div>
-      <hr />
+
     </div>
 
     <!--    display categories-->

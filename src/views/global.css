@@ -44,6 +44,9 @@ body {
     background-color: #176B87;
 
 }
+.nav-link {
+    color: rgba(255, 255, 255);
+}
 
 #nav a {
     font-weight: bold;

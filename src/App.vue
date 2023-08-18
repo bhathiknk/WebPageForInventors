@@ -1,56 +1,54 @@
 <template>
   <Navbar />
-
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view v-if="categories && products" style="min-height: 60vh"
+  <router-view
+      v-if="categories && products"
+      style="min-height: 60vh"
       :baseURL="baseURL"
       :categories="categories"
       :products="products"
-       @fetchData="fetchData"
+      @fetchData="fetchData"
   >
   </router-view>
-
   <!--  footer-->
   <Footer />
-
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer";
-import axios from 'axios';
+import axios from "axios";
 export default {
-  components: { Navbar,Footer },
+  components: { Navbar, Footer },
   data() {
     return {
-      baseURL : "https://limitless-lake-55070.herokuapp.com/",
+      baseURL: "https://limitless-lake-55070.herokuapp.com/",
       products: null,
-      categories: null
-    }
+      categories: null,
+    };
   },
   methods: {
     async fetchData() {
-
       // api call to get all the categories
-      await axios.get(this.baseURL + "category/")
-          .then(res => {
-            this.categories = res.data
-          }).catch((err) => console.log('err', err));
+      await axios
+          .get(this.baseURL + "category/")
+          .then((res) => {
+            this.categories = res.data;
+          })
+          .catch((err) => console.log("err", err));
 
       // api call to get the products
 
-      await axios.get(this.baseURL + "product/")
-          .then(res => {
-            this.products = res.data
-          }).catch((err) => console.log('err', err));
-    }
+      await axios
+          .get(this.baseURL + "product/")
+          .then((res) => {
+            this.products = res.data;
+          })
+          .catch((err) => console.log("err", err));
+    },
   },
   mounted() {
     this.fetchData();
-  }
+  },
 };
 </script>
 
@@ -62,4 +60,19 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
+
+Navbar
