@@ -54,7 +54,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a
-                class="nav-link dropdown-toggle"
+                class="nav-link text-light dropdown-toggle"
                 href="#"
                 id="navbarAccount"
                 data-toggle="dropdown"
@@ -75,7 +75,7 @@
           </li>
           <li class="nav-item dropdown">
             <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle text-light"
                 href="#"
                 id="navbarAccount"
                 data-toggle="dropdown"
@@ -107,9 +107,12 @@
             </div>
           </li>
           <li class="nav-item">
-            <router-link class="text-light" :to="{ name: 'Cart' }">
-              <i class="fa fa-shopping-cart" style="font-size:36px"></i>
-            </router-link>
+            <div id="cart" style="position:relative">
+              <span id="nav-cart-count">{{ cartCount }}</span>
+              <router-link class="text-light" :to="{ name: 'Cart' }">
+                <i class="fa fa-shopping-cart" style="font-size:36px"></i>
+              </router-link>
+            </div>
           </li>
         </ul>
         <!-- dropdown for account -->
@@ -117,8 +120,10 @@
     </nav>
 </template>
 <script>
+import swal from "sweetalert";
 export default {
   name: "Navbar",
+  props: ["cartCount"],
   data() {
     return {
       token: null,
@@ -128,6 +133,12 @@ export default {
     signout() {
       localStorage.removeItem("token");
       this.token = null;
+      swal({
+        text: "Logged you out. Visit again",
+        icon: "success",
+      });
+      this.$emit("resetCartCount");
+      this.$router.push({ name: "Home" });
     },
   },
   mounted() {

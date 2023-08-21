@@ -56,3 +56,26 @@ body {
 #nav a.router-link-exact-active {
     color: white;
 }
+
+#search-button-navbar {
+    background-color: #febd69;
+    border-color: #febd69;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#nav-cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    font-size: 15px;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    margin-left: 10px;
+}

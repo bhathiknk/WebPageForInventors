@@ -38,20 +38,18 @@ export default {
         email: this.email,
         password: this.password,
       };
-      try {
-        const res = await axios.post(`${this.baseURL}user/signIn`, body);
-        localStorage.setItem("token", res.data.token);
-        swal({
-          text: "Login successful",
-          icon: "success",
-        }).then(() => {
-          // Redirect to the home page directly
-          this.$router.push("/")
-
-        });
-      } catch (err) {
-        console.error("Error", err);
-      }
+      await axios
+          .post(`${this.baseURL}user/signIn`, body)
+          .then((res) => {
+            localStorage.setItem("token", res.data.token);
+            swal({
+              text: "Login successful",
+              icon: "success",
+            });
+            this.$emit("fetchData");
+            this.$router.push({ name: "Home" });
+          })
+          .catch((err) => console.log("err", err));
     },
   },
 };

@@ -83,5 +83,6 @@ export default {
 }
 .subtext{
   color: white;
+  text-align: center;
 }
 </style>
