@@ -22,6 +22,7 @@
 <script>
 const axios = require("axios");
 import CategoryBox from "../../components/Category/CategoryBox.vue";
+
 export default {
   name: "Category",
   components: { CategoryBox },
@@ -33,10 +34,12 @@ export default {
   },
   methods: {
     async getCategories() {
-      await axios
-        .get(`${this.baseURL}/category/`)
-        .then((res) => (this.categories = res.data))
-        .catch((err) => console.log(err));
+      try {
+        const response = await axios.get(`${this.baseURL}/category/?_embed=products`);
+        this.categories = response.data;
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
     },
   },
   mounted() {
@@ -44,4 +47,5 @@ export default {
   },
 };
 </script>
+
 <style scoped></style>

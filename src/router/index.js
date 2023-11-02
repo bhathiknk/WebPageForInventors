@@ -13,6 +13,9 @@ import Signup from "../views/Signup";
 import Signin from '../views/Signin';
 import WishList from "../views/Product/WishList";
 import Cart from '../views/Cart';
+import Success from '../views/payment/Success';
+import Failed from '../views/payment/Failed';
+import Checkout from '../views/Checkout/Checkout';
 
 
 import '../views/global.css'
@@ -105,7 +108,27 @@ const routes = [
     path: '/cart',
     name: 'Cart',
     component: Cart
-  }
+  },
+
+  // sucess and fail pages
+  {
+    path: '/payment/success',
+    name: 'PaymentSuccess',
+    component: Success,
+  },
+
+  {
+    path: '/payment/failed',
+    name: 'PaymentFail',
+    component: Failed,
+  },
+    // checkout
+
+    {
+      path: '/checkout',
+      name: 'Checkout',
+      component: Checkout,
+    },
 ]
 
 const router = createRouter({

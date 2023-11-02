@@ -39,17 +39,17 @@ export default {
         password: this.password,
       };
       await axios
-          .post(`${this.baseURL}user/signIn`, body)
-          .then((res) => {
-            localStorage.setItem("token", res.data.token);
-            swal({
-              text: "Login successful",
-              icon: "success",
-            });
-            this.$emit("fetchData");
-            this.$router.push({ name: "Home" });
-          })
-          .catch((err) => console.log("err", err));
+        .post(`${this.baseURL}user/signin`, body)
+        .then((res) => {
+          localStorage.setItem("token", res.data.token);
+          swal({
+            text: "Login successful",
+            icon: "success",
+          });
+          this.$emit("fetchData");
+          this.$router.push({ name: "Home" });
+        })
+        .catch((err) => console.log("err", err));
     },
   },
 };
